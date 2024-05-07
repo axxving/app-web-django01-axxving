@@ -17,9 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from miapp import views
+# from miapp import views
+import miapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hola-work/', views.hola_work, name="hola_work"),
+    path('hola-work/', miapp.views.hola_work, name="hola_work"),
+    path('', miapp.views.index, name="home"),
+    path('page/', miapp.views.page_pruebas, name="page"),
 ]
