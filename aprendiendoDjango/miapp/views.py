@@ -8,15 +8,26 @@ def hola_work(request):
                         <p>Esto es un parrafo</p>
                         """)
 
-def index(request):
-    return HttpResponse("""
-                        <h1>Inicio</h1>
-                        """)
-
 def page_pruebas(request):
     return HttpResponse("""
                         <h1>Pagina de pruebas</h1>
                         """)
+
+def index(request):
+    html = """ 
+        <h1>Usando una variable</h1> 
+        <p>Anios hasta el 2050:</p>
+        <ul>
+    """
+
+    year = 2021
+    while year <= 2050:
+        html += f"<li>{str(year)}</li>"
+        year += 1
+
+    html += "</ul>"
+
+    return HttpResponse(html)
 
 # MVC - Modelo Vista Controlador -> Acciones (Metodos)
 
