@@ -8,6 +8,7 @@ layout = """
     <a href="/">Inicio</a>
     <a href="/hola-work">Hola Trabajo</a>
     <a href="/page">Pagina de pruebas</a>
+    <a href="/contacto">Contacto</a>
 </ul>
 </hr>
 """
@@ -43,6 +44,9 @@ def index(request):
     html += "</ul>"
 
     return HttpResponse(layout+html)
+
+def contacto_page(request, nombre, apellido):
+    return HttpResponse(layout + f"<h2>Contacto {nombre} {apellido}</h2>")
 
 # MVC - Modelo Vista Controlador -> Acciones (Metodos)
 
