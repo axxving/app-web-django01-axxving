@@ -45,7 +45,7 @@ def index(request):
 
     return HttpResponse(layout+html)
 
-def contacto_page(request, nombre, apellido):
+def contacto_page(request, nombre="Alejandro", apellido="Hernandez"):
     return HttpResponse(layout + f"<h2>Contacto {nombre} {apellido}</h2>")
 
 # MVC - Modelo Vista Controlador -> Acciones (Metodos)
