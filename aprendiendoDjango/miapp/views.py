@@ -1,15 +1,28 @@
 from django.shortcuts import render, HttpResponse
 
+#
+layout = """
+<h1>Sitio Web</h1>
+</hr>
+<ul>
+    <a href="/">Inicio</a>
+    <a href="/hola-work">Hola Trabajo</a>
+    <a href="/page">Pagina de pruebas</a>
+</ul>
+</hr>
+"""
+
+
 # Create your views here.
 
 def hola_work(request):
-    return HttpResponse("""
+    return HttpResponse(layout + """
                         <h1>Hola trabajo desde Django</h1>
                         <p>Esto es un parrafo</p>
                         """)
 
 def page_pruebas(request):
-    return HttpResponse("""
+    return HttpResponse(layout + """
                         <h1>Pagina de pruebas</h1>
                         """)
 
@@ -29,7 +42,7 @@ def index(request):
 
     html += "</ul>"
 
-    return HttpResponse(html)
+    return HttpResponse(layout+html)
 
 # MVC - Modelo Vista Controlador -> Acciones (Metodos)
 
