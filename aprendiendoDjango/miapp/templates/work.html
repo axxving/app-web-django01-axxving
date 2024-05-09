@@ -3,6 +3,9 @@
 {% block title %} Work {% endblock %}
 
 {%block content%}
-<h1>Hola Work Gracias a Dios</h1>
-<strong>Soy Irving Alejandro Hernandez Ramirez</strong>
+    <!--Extrae el contenido del bloque jefe-->
+    {{block.super}}
+
+    <h1>Hola Work Gracias a Dios</h1>
+    <strong>Soy Irving Alejandro Hernandez Ramirez</strong>
 {% endblock %}
