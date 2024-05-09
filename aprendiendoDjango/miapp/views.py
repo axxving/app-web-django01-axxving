@@ -4,19 +4,19 @@ from django.shortcuts import render, HttpResponse, redirect
 
 # Hola Work
 def hola_work(request):
-    return render(request, 'work.html')
+    return render(request, 'components/work.html')
 
 # Pagina de pruebas
 def pagina(request):
-    return render(request, 'pagina.html')
+    return render(request, 'components/pagina.html')
 
 # Index
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'components/index.html')
 
 # Contacto
 def contacto(request):
-    return render(request, 'contacto.html')
+    return render(request, 'components/contacto.html')
 
 # MVC - Modelo Vista Controlador -> Acciones (Metodos)
 
