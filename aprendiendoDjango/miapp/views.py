@@ -16,48 +16,21 @@ layout = """
 
 # Create your views here.
 
+# Hola Work
 def hola_work(request):
-    return HttpResponse(layout + """
-                        <h1>Hola trabajo desde Django</h1>
-                        <p>Esto es un parrafo</p>
-                        """)
+    return render(request, 'work.html')
 
-def page_pruebas(request, redirigir = 0):
+# Pagina de pruebas
+def pagina(request):
+    return render(request, 'pagina.html')
 
-    if redirigir == 1:
-        return redirect('contacto', nombre="Alex", apellido="Hrz")
-
-    return HttpResponse(layout + """
-                        <h1>Pagina de pruebas</h1>
-                        """)
-
+# Index
 def index(request):
-    html = """ 
-        <h1>Usando una variable</h1> 
-        <p>Anios hasta el 2050:</p>
-        <ul>
-    """
+    return render(request, 'index.html')
 
-    year = 2021
-    while year <= 2050:
-
-        if year % 2 == 0:
-            html += f"<li>{str(year)}</li>"
-        year += 1
-
-    html += "</ul>"
-
-    return HttpResponse(layout+html)
-
-def contacto_page(request, nombre="", apellido=""):
-
-    html = ""
-
-    if nombre and apellido:
-        html = "El nombre completo es"
-        html = f"<h3>{nombre} {apellido}</h3>"
-
-    return HttpResponse(layout + f"<h2>Contacto</h2>" + html)
+# Contacto
+def contacto(request):
+    return render(request, 'contacto.html')
 
 # MVC - Modelo Vista Controlador -> Acciones (Metodos)
 

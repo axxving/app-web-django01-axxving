@@ -21,14 +21,9 @@ from django.urls import path
 import miapp.views
 
 urlpatterns = [
+    path('index/', miapp.views.index, name="home"),
     path('admin/', admin.site.urls),
-    path('hola-work/', miapp.views.hola_work, name="hola_work"),
-    path('', miapp.views.index, name="home"),
-    path('page/', miapp.views.page_pruebas, name="page"),
-
-    path('page/<int:redirigir>', miapp.views.page_pruebas, name="page"),
-
-    path('contacto/', miapp.views.contacto_page, name="contacto"),
-    path('contacto/<str:nombre>', miapp.views.contacto_page, name="contacto"),
-    path('contacto/<str:nombre>/<str:apellido>', miapp.views.contacto_page, name="contacto")
+    path('work/', miapp.views.hola_work, name="hola_work"),
+    path('pagina/', miapp.views.pagina, name="pagina"),
+    path('contacto/', miapp.views.contacto, name="contacto"),
 ]
