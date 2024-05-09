@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} 
+        
+        {% endblock %} | 
+        Alejandro Hernandez
+    </title>
+</head>
+
+<body>
+    <h1>Pagina Web con Django</h1>
+
+    </hr>
+
+    <ul>
+        <a href="/index">Inicio</a>
+        <a href="/work">Hola Trabajo</a>
+        <a href="/pagina">Pagina de pruebas</a>
+        <a href="/contacto">Contacto</a>
+    </ul>
+
+    </hr>
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        Master en Python.
+    </footer>
+</body>
+
+</html>

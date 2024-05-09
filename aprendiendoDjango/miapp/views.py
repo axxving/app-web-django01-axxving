@@ -1,19 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
 
-#
-layout = """
-<h1>Sitio Web</h1>
-</hr>
-<ul>
-    <a href="/">Inicio</a>
-    <a href="/hola-work">Hola Trabajo</a>
-    <a href="/page">Pagina de pruebas</a>
-    <a href="/contacto">Contacto</a>
-</ul>
-</hr>
-"""
-
-
 # Create your views here.
 
 # Hola Work
