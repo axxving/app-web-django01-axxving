@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 #
 layout = """
@@ -22,7 +22,11 @@ def hola_work(request):
                         <p>Esto es un parrafo</p>
                         """)
 
-def page_pruebas(request):
+def page_pruebas(request, redirigir = 0):
+
+    if redirigir == 1:
+        return redirect('contacto', nombre="Alex", apellido="Hrz")
+
     return HttpResponse(layout + """
                         <h1>Pagina de pruebas</h1>
                         """)
