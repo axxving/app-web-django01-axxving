@@ -5,30 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        {% block title %} 
-        
-        {% endblock %} | 
+        {% block title %}
+
+        {% endblock %} |
         Alejandro Hernandez
     </title>
 </head>
 
 <body>
-    <h1>Pagina Web con Django</h1>
 
-    </hr>
+    <!-- Cabecera de la pagina-->
+    <header>
+        <div id="logotipo">
+            <!--Logo Dejango-->
+            <h1>Sitio Web con Django</h1>
+        </div>
 
-    <ul>
-        <a href="/index">Inicio</a>
-        <a href="/work">Hola Trabajo</a>
-        <a href="/pagina">Pagina de pruebas</a>
-        <a href="/contacto">Contacto</a>
-    </ul>
-
-    </hr>
+        <nav>
+            <ul>
+                <a href="/index">Inicio</a>
+                <a href="/work">Hola Trabajo</a>
+                <a href="/pagina">Pagina de pruebas</a>
+                <a href="/contacto">Contacto</a>
+            </ul>
+        </nav>
+    </header>
 
     <div id="content">
+        <h2 class="title">Titulo de prueba</h2>
         {% block content %}
-            <strong>Contenido del bloque original</strong>
+        <strong>Contenido del bloque original</strong>
         {% endblock %}
     </div>
 
