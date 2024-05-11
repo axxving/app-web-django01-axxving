@@ -10,6 +10,8 @@
         {% endblock %} |
         Alejandro Hernandez
     </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/styles.css' %}">
 </head>
 
 <body>
@@ -18,16 +20,15 @@
     <header>
         <div id="logotipo">
             <!--Logo Dejango-->
-            <h1>Sitio Web con Django</h1>
+            <img class="logo" src="{% static 'imgs/logo.png' %}" alt="logo Django">
+            <h1 class="titulo">Sitio Web con Django</h1>
         </div>
 
         <nav>
-            <ul>
-                <a href="/index">Inicio</a>
-                <a href="/work">Hola Trabajo</a>
-                <a href="/pagina">Pagina de pruebas</a>
-                <a href="/contacto">Contacto</a>
-            </ul>
+            <a href="/index">Inicio</a>
+            <a href="/work">Hola Trabajo</a>
+            <a href="/pagina">Pagina de pruebas</a>
+            <a href="/contacto">Contacto</a>
         </nav>
     </header>
 
