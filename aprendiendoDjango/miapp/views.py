@@ -11,10 +11,15 @@ def pagina(request):
     return render(request, 'components/pagina.html')
 
 # Index
+
 def index(request):
+
+    nombre = "Alex"
+
     return render(request, 'components/index.html', {
         'title': 'Inicio',
         'mi_variable': 'Soy un dato que esta en la vista',
+        'nombre': nombre,
     })
 
 # Contacto

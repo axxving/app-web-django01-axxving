@@ -8,6 +8,16 @@
 
 {{mi_variable}} <br>
 
+{% if nombre and nombre == 'Alex' %}
+
+    <p>{{nombre}}</p> <br>
+
+{% else %}
+
+    <strong>El nombre no existe o no coincide</strong> <br>
+
+{% endif %}
+
 <strong>Inicio de la pagina</strong>
 
 {% endblock %}
