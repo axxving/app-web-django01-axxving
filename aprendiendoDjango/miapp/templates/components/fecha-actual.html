@@ -1,0 +1,11 @@
+<h1>{{saludo}}: {{nombre}}</h1>
+<hr />
+<h2>Estamos a 2021</h2>
+<h2>Recorrido de years</h2>
+<ul>
+    {% for year in years %}
+        {% if year|divisibleby:2 %}
+            <li> {{ year }} </li>
+        {% endif %}
+    {% endfor %}
+</ul>
