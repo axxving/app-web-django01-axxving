@@ -18,6 +18,15 @@
 
 {% endif %}
 
+<h2>Listado de lenguajes de programacion</h2>
+
+<ul>
+    {% for lenguaje in lenguajes %}
+        <li>{{lenguaje}}</li>
+    {% endfor %}
+</ul>
+
+
 <strong>Inicio de la pagina</strong>
 
 {% endblock %}

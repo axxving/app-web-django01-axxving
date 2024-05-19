@@ -15,11 +15,13 @@ def pagina(request):
 def index(request):
 
     nombre = "Alex"
+    lenguajes = [ "JavaScript", "Python", "C" ]
 
     return render(request, 'components/index.html', {
         'title': 'Inicio',
         'mi_variable': 'Soy un dato que esta en la vista',
         'nombre': nombre,
+        'lenguajes': lenguajes
     })
 
 # Contacto
