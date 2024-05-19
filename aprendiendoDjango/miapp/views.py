@@ -14,6 +14,9 @@ def pagina(request):
 
 def index(request):
 
+    year = 2021
+    hasta = range(year, 2050)
+
     nombre = "Alex"
     lenguajes = [ "JavaScript", "Python", "C" ]
 
@@ -21,7 +24,8 @@ def index(request):
         'title': 'Inicio',
         'mi_variable': 'Soy un dato que esta en la vista',
         'nombre': nombre,
-        'lenguajes': lenguajes
+        'lenguajes': lenguajes,
+        'years': hasta
     })
 
 # Contacto

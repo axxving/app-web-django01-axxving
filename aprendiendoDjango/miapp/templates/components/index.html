@@ -22,13 +22,25 @@
 
 <ul>
     {% for lenguaje in lenguajes %}
+
         <li>{{lenguaje}}</li>
+
     {% empty %}
+
         <p>NO HAY LENGUAJES QUE MOSTRAR</P>
 
     {% endfor %}
 </ul>
 
+<h2>Recorrido de years</h2>
+<ul>
+
+    {% for year in years %}
+        {% if year|divisibleby:2 %}
+            <li> {{ year }} </li>
+        {% endif %}
+    {% endfor %}
+</ul>
 
 <strong>Inicio de la pagina</strong>
 
