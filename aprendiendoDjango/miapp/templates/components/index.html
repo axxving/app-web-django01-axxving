@@ -23,6 +23,9 @@
 <ul>
     {% for lenguaje in lenguajes %}
         <li>{{lenguaje}}</li>
+    {% empty %}
+        <p>NO HAY LENGUAJES QUE MOSTRAR</P>
+
     {% endfor %}
 </ul>
 
